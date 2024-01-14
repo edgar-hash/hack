@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritional Label Prompter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="prompt">
+        <h1>Enter Dining Hall and Food Item:</h1>
+        <form method="post" action="{{ url_for('submit_food') }}">
+            <label for="diningHall">Select Dining Hall:</label>
+            <select id="diningHall" name="diningHall">
+                <option value="Carrillo">Carrillo</option>
+                <option value="DLG">DLG</option>
+                <option value="Portola">Portola</option>
+                <!-- Add more dining halls as needed -->
+            </select>
+
+            <label for="foodInput">Enter Food Item:</label>
+            <input type="text" name="foodInput" placeholder="Food Item">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
