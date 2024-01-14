@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="result">
+        <h1>Submitted Information:</h1>
+        <p>Food Item: {{ food_item }}</p>
+        <p>Dining Hall: {{ dining_hall }}</p>
+
+        <h2>Options Array:</h2>
+        <ul>
+            {% for option in options_array %}
+                <li>{{ option }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
